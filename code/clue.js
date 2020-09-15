@@ -23,7 +23,7 @@
   const missScarlet = {
     firstName: 'Cassandra',
     lastName: 'Scarlet',
-   color: 'red',
+    color: 'red',
     description: 'She is a bit insidious',
     age: 39,  
     image: 'assets/scarlet.png',
@@ -115,13 +115,42 @@
 
 const suspects = [
   mrGreen,
+  professorPlum,
+  missScarlet,
+  mrsPeacock,
+  colonelMustard,
   mrsWhite
-  // ...  and the rest
 ]
 
-const weapons = []
+const weapons = [
+  rope,
+  knife,
+  candlestick,
+  dumbbell,
+  poison,
+  axe,
+  bat,
+  trophy,
+  pistol
+]
 
-const rooms = []
+const rooms = [
+  'diningRoom',
+  'conservatory',
+  'kitchen',
+  'study',
+  'library',
+  'billiardRoom',
+  'lounge',
+  'ballroom',
+  'hall',
+  'spa',
+  'livingRoom',
+  'observatory',
+  'theater',
+  'guestHouse',
+  'patio'
+]
 
 // THIS FUNCTION WILL RANDOMLY SELECT ONE ITEM FROM THE ARRAY THAT YOU PASS IN TO THE FUNCTION.
 // YOU DON'T NEED TO CHANGE THIS, JUST TRY TO UNDERSTAND IT. AND HOW TO USE IT.
