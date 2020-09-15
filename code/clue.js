@@ -1,21 +1,113 @@
 // STEP 1 - CREATE OBJECTS FOR ALL THE SUSPECTS, SOMETHING LIKE THIS:
 
-const mrGreen = {
-  firstName: 'Jacob',
-  lastName: 'Green',
-  color: 'green',
-  description: 'He has a lot of connections',
-  age: 45,
-  image: 'assets/green.png',
-  occupation: 'Entrepreneur'
-}
+  const mrGreen = {
+    firstName: 'Jacob',
+    lastName: 'Green',
+    color: 'green',
+    description: 'He has a lot of connections',
+    age: 45,
+    image: 'assets/green.png',
+    occupation: 'Entrepreneur'
+  }
+
+  const professorPlum = {
+    firstName: 'Victor',
+    lastName: 'Plum',
+    color: 'purple',
+    description: 'He is a bit confused',
+    age: 55,
+    image: 'assets/plum.png',
+    occupation: 'Proffesor'
+  }
+
+  const missScarlet = {
+    firstName: 'Cassandra',
+    lastName: 'Scarlet',
+   color: 'red',
+    description: 'She is a bit insidious',
+    age: 39,  
+    image: 'assets/scarlet.png',
+    occupation: 'writer'
+  }
+
+  const mrsPeacock = {
+    firstName: 'Elanor Peacock',
+    lastName: 'Peacock',
+    color: 'blue',
+    description: 'She likes to take long walks',
+    age: 60,
+    image: 'assets/peacock.png',
+    occupation: 'mistress'
+  }
+
+  const colonelMustard = {
+    firstName: 'Jack',
+    lastName: 'Mustard',
+    color:'yellow',
+    description: 'He is vain',
+    age: 65,
+    image: 'assets/mustard.png',
+    occupation: 'colonel'
+  }
+
+  const mrsWhite = {
+    firstName: 'Mrs',
+    lastName: 'White',
+    color: 'white',
+    description: 'Always nice and tidy',
+    age: 63,
+    image: 'assets/white.png',
+    occupation: 'householder'
+  }
 
 // CREATE OBJECTS FOR ALL THE WEAPONS, ADD MORE CHARACTERISTICS TO THE WEAPONS IF YOU LIKE.
 
-const rope = {
-  name: 'rope',
-  weight: 10
-}
+  const rope = {
+    name: 'rope',
+    weight: 10
+  }
+
+  const knife = {
+    name: 'knife',
+    weight: 15
+  }
+
+  const candlestick = {
+    name: 'candlestick',
+    weight: 12
+  }
+
+  const dumbbell = {
+    name: 'dumbbell',
+    weight: 18
+  }
+
+  const poison = {
+    name: 'poison',
+    color: 'transparent'
+  }
+
+  const axe = {
+    name: 'axe',
+    weight: 30
+  }
+
+  const bat = {
+    name: 'bat',
+    weight: 22  
+  }
+
+  const trophy = {
+    name: 'trophy',
+    weight: 16,
+    color: 'gold'
+  }
+
+  const pistol = {
+    name: 'pistol',
+    weight: 24,
+  }
+
 
 // THE ROOMS ONLY HAS A NAME SO NO NEED FOR OBJECTS THERE.
 
