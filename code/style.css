@@ -49,6 +49,7 @@ p {
   text-align: center;
   padding-top: 30px;
   border-radius: 16px;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .weapon-deck {
@@ -58,16 +59,17 @@ p {
   text-align: center;
   padding-top: 30px;
   border-radius: 16px;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .room-deck {
   width: 250px;
   height: 400px;
   background: #9E433A;
-
   text-align: center;
   padding-top: 30px;
   border-radius: 16px;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 button {
@@ -85,14 +87,14 @@ button {
   content: '';
   display: flex;
   justify-content: center;
-  padding: 100px;
+  padding-top: 70px;
   width: 50%;
+  text-align: center;
 }
 
 #solution {
   background:#3D915D;
 }
-
 
 footer {
   text-align: center;

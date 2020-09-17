@@ -85,9 +85,11 @@
     color: 'lightgrey'
   }
 
-  const axe = {
+  const axe = { 
     name: 'Axe',
-    color: 'lightpurple'
+    color: 'lightpurple',
+    image: 'assets/axe.jpg'
+    //I would have added pictures for all of the weapons if I had the time.
   }
 
   const bat = {
@@ -105,8 +107,14 @@
     color: 'black'
   }
 
-  //GROUPING THE OBJECTS IN ARRAYS
+  // OBJECTS FOR ROOMS  
+  //I would have added objects for all of the rooms if I had the time.
+  const library = {
+    name: 'Library',
+    image: 'assets/library.jpg'
+  }
 
+  //GROUPING THE OBJECTS IN ARRAYS
 const suspects = [
   mrGreen,
   professorPlum,
@@ -209,6 +217,9 @@ document.getElementById(
 // Reveal the mystery
 const revealMystery = (mystery) => {
   event.preventDefault();
-  document.getElementById('solution').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName}, in the ${rooms[4]} with a ${trophy.name}.`
+  document.getElementById('solution').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName} with an ${axe.name}, in the ${rooms[4]}.`
+  killerImage.src = missScarlet.image
+  roomImage.src = library.image
+  weaponImage.src = axe.image
 }
 revealMystery()
