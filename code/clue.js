@@ -1,5 +1,4 @@
-// STEP 1 - CREATE OBJECTS FOR ALL THE SUSPECTS, SOMETHING LIKE THIS:
-
+// OBJECTS FOR SUSPECTS
   const mrGreen = {
     firstName: 'Jacob',
     lastName: 'Green',
@@ -31,7 +30,7 @@
   }
 
   const mrsPeacock = {
-    firstName: 'Elanor Peacock',
+    firstName: 'Elanor',
     lastName: 'Peacock',
     color: 'blue',
     description: 'She likes to take long walks',
@@ -53,65 +52,60 @@
   const mrsWhite = {
     firstName: 'Mrs',
     lastName: 'White',
-    color: 'white',
+    color: 'beige',
     description: 'Always nice and tidy',
     age: 63,
     image: 'assets/white.png',
     occupation: 'householder'
   }
 
-// CREATE OBJECTS FOR ALL THE WEAPONS, ADD MORE CHARACTERISTICS TO THE WEAPONS IF YOU LIKE.
-
+// OBJECTS FOR WEAPONS
   const rope = {
-    name: 'rope',
-    weight: 10
+    name: 'Rope',
+    color: 'pink'
   }
 
   const knife = {
-    name: 'knife',
-    weight: 15
+    name: 'Knife',
+    color: 'brown'
   }
 
   const candlestick = {
-    name: 'candlestick',
-    weight: 12
+    name: 'Candlestick',
+    color:'lightyellow'
   }
 
   const dumbbell = {
-    name: 'dumbbell',
-    weight: 18
+    name: 'Dumbbell',
+    color:'lightblue'
   }
 
   const poison = {
-    name: 'poison',
-    color: 'transparent'
+    name: 'Poison',
+    color: 'lightgrey'
   }
 
   const axe = {
-    name: 'axe',
-    weight: 30
+    name: 'Axe',
+    color: 'lightpurple'
   }
 
   const bat = {
-    name: 'bat',
-    weight: 22  
+    name: 'Bat',
+    color: 'lightgreen'
   }
 
   const trophy = {
-    name: 'trophy',
-    weight: 16,
-    color: 'gold'
+    name: 'Trophy',
+    color: 'saffron'
   }
 
   const pistol = {
-    name: 'pistol',
-    weight: 24,
+    name: 'Pistol',
+    color: 'black'
   }
 
-
-// THE ROOMS ONLY HAS A NAME SO NO NEED FOR OBJECTS THERE.
-
-// NOW GROUP ALL SUSPECTS, WEAPONS AND ROOMS IN ARRAYS LIKE THIS:
+  //GROUPING THE OBJECTS IN ARRAYS
 
 const suspects = [
   mrGreen,
@@ -135,21 +129,21 @@ const weapons = [
 ]
 
 const rooms = [
-  'diningRoom',
-  'conservatory',
-  'kitchen',
-  'study',
-  'library',
-  'billiardRoom',
-  'lounge',
-  'ballroom',
-  'hall',
-  'spa',
-  'livingRoom',
-  'observatory',
-  'theater',
-  'guestHouse',
-  'patio'
+  'Dining Room',
+  'Conservatory',
+  'Kitchen',
+  'Study',
+  'Library',
+  'Billiard Room',
+  'Lounge',
+  'Ballroom',
+  'Hall',
+  'Spa',
+  'Living room',
+  'Observatory',
+  'Theater',
+  'GuestHouse',
+  'Patio'
 ]
 
 // THIS FUNCTION WILL RANDOMLY SELECT ONE ITEM FROM THE ARRAY THAT YOU PASS IN TO THE FUNCTION.
@@ -161,19 +155,19 @@ const randomSelector = array => {
 // CREATE AN OBJECT THAT KEEPS THE MYSTERY.
 // With a killer, a weapon and a room.
 // The values will be set later.
-
 const mystery = {
   suspects,
   weapons,
   rooms:[]
 }
 
+//Killer
 // This function will be invoked when you click on the killer card.
 const pickKiller = () => {
-  // This will randomly select a killer from the suspects. And add that to the mystery object.
-  mystery.killer = randomSelector(suspects)
 
-  // This will change the background color of the card to the one connected to the chosen killer and show the full name of the killer. Feel free to add more things to show about the killer.
+  mystery.killer = randomSelector(suspects)
+  killerImage.src = mystery.killer.image
+
   document.getElementById('killerCard').style.background = mystery.killer.color
   document.getElementById(
     'killerName'
@@ -187,18 +181,20 @@ const pickKiller = () => {
     'killerCard'
     ).addEventListener('click', pickKiller);
 
+//Weapons
 const pickWeapon = () => {
   mystery.weapon = randomSelector(weapons)
   document.getElementById('weaponCard').style.background = mystery.weapon.color
   document.getElementById(
     'weaponName'
-).innerHTML = `${mystery.weapon.name} ${mystery.weapon.weight}`
+).innerHTML = `${mystery.weapon.name}`
 }
 
 document.getElementById(
   'weaponCard'
   ).addEventListener('click', pickWeapon);
 
+//Rooms
  const pickRoom = () => {
   mystery.room = randomSelector(rooms)
   document.getElementById(
@@ -210,5 +206,9 @@ document.getElementById(
   'roomCard'
   ).addEventListener('click', pickRoom);
 
-// STEP 4 - CREATE A FUNCTION revealMystery that will be invoked when you click that button. It should show something like:
-// 'The murder was committed by Jacob Green, in the living room with a rope.
+// Reveal the mystery
+const revealMystery = (mystery) => {
+  event.preventDefault();
+  document.getElementById('solution').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName}, in the ${rooms[4]} with a ${trophy.name}.`
+}
+revealMystery()
