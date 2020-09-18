@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Courier New', Courier, monospace, 'Permanent Marker', cursive;
+  font-family:'Permanent Marker', cursive;
   background-color: #3D915D;
   display: flex;
   flex-direction: column;
@@ -21,33 +21,32 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  font-size: 100px;
   font-family: 'Permanent Marker';
   background: white;
   flex-direction: column;
+  width: 100%;
+  font-size: 100px;
 }
 
 p {
-  margin: 1px;
-  font-family: 'Permanent Marker';
+  font: 'Permanent Marker';
+  background-color: #fff;
   font-size: 40px;
   font-weight: 300;
-  background-color: #fff;
+  margin: 1px;
 }
 
 .cards {
-  display: flex;
   flex-wrap: wrap;
-  margin: 50px auto;
-  width: 80%;
-  height: 70%;
-  background: rgb(10, 53, 10);
   display: flex;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
+  margin: 50px auto;
   border-radius: 25px;
+  width: 80%;
+  height: 70%;
+  background: rgb(10, 53, 10);
 }
 
 #weaponName, #killerName, #roomName {
@@ -56,13 +55,13 @@ p {
 
 .killer-deck {
   flex-direction: row;
-  width: 250px;
-  height: 400px;
   background: #916563; 
   text-align: center;
+  box-shadow: 5px 10px 8px #888888;
   padding-top: 30px;
   border-radius: 16px;
-  box-shadow: 5px 10px 8px #888888;
+  width: 250px;
+  height: 400px;
 }
 
 .killer-deck:hover, .weapon-deck:hover, .room-deck:hover {
@@ -71,40 +70,40 @@ p {
 
 .weapon-deck {
   flex-direction: row;
-  width: 250px;
-  height: 400px;
   background: #9C9BD7;
   text-align: center;
+  box-shadow: 5px 10px 8px #888888;
+  width: 250px;
+  height: 400px;
   padding-top: 30px;
   border-radius: 16px;
-  box-shadow: 5px 10px 8px #888888;
 }
 
 .room-deck {
   flex-direction: row;
-  width: 250px;
-  height: 400px;
   background: #9E433A;
   text-align: center;
+  box-shadow: 5px 10px 8px #888888;
+  width: 250px;
+  height: 400px;
   padding-top: 30px;
   border-radius: 16px;
-  box-shadow: 5px 10px 8px #888888;
 }
 
 .solution-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   padding-top: 100px;
+  padding-bottom: 80px;
+  width: 100%;
 }
 
 .solution {
+  text-align: center;
   content: '';
   padding-top: 40px;
-  width: 35%;
-  text-align: center;
-  font-size: 14px;
+  width: 32%;
 }
 
 #solution {
@@ -113,15 +112,14 @@ p {
 }
 
 button {
-  padding: 8px 16px;
-  background: #3D915D;
   font-family: 'Permanent Marker';
   border: none;
-  font-size: 20px;
-  border-radius: 8px;
+  background: #3D915D;
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  font-size: 20px;
+  border-radius: 8px;
   padding: 25px;
 }
 
@@ -130,9 +128,9 @@ button:hover {
 }
 
 button:active {
-  background: rgb(10, 53, 10);
   color: white;
   box-shadow: 0 5px #666;
+  background: rgb(10, 53, 10);
   transform: translateY(4px);
 }
 
@@ -143,6 +141,24 @@ button:focus{
 #solution {
   background:#3D915D;
   margin-bottom: 60px;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer-text {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(10, 53, 10);
+}
+
+/**** FOR IPAD ****/
+
+@media (max-width: 1024px) {
+  .cards {
+    width: 95%;
+  }
 }
 
 /**** FOR MOBILE ****/
@@ -165,7 +181,6 @@ button:focus{
   .solution {
     padding-top: 20px;
   }
-
 }
 
 @media (max-width: 768px) {

@@ -107,14 +107,14 @@
     color: 'black'
   }
 
-  // OBJECTS FOR ROOMS  
+// OBJECTS FOR ROOMS  
   //I would have added objects for all of the rooms if I had the time.
   const library = {
     name: 'Library',
     image: 'assets/library.jpg'
   }
 
-  //GROUPING THE OBJECTS IN ARRAYS
+//GROUPING THE OBJECTS IN ARRAYS
 const suspects = [
   mrGreen,
   professorPlum,
@@ -218,8 +218,10 @@ document.getElementById(
 const revealMystery = (mystery) => {
   event.preventDefault();
   document.getElementById('solution').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName} with an ${axe.name}, in the ${rooms[4]}.`
+  //Makes the solution-pictures go to the cards when clicking. Need to not click on a card first, to make it work perfectly.
   killerImage.src = missScarlet.image
   roomImage.src = library.image
   weaponImage.src = axe.image
 }
 revealMystery()
+
