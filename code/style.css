@@ -8,34 +8,46 @@ html {
 
 body {
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace, 'Permanent Marker', cursive;
   background-color: #3D915D;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-image: url(https://i.pinimg.com/564x/e2/ae/f6/e2aef657b2faac87de8c27ee392bc5ca.jpg);
 }
 
 h1 {
-  font-size: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 100px;
+  font-family: 'Permanent Marker';
+  background: white;
+  flex-direction: column;
 }
 
 p {
   margin: 1px;
+  font-family: 'Permanent Marker';
   font-size: 40px;
   font-weight: 300;
   background-color: #fff;
 }
 
 .cards {
+  display: flex;
+  flex-wrap: wrap;
   margin: 50px auto;
-  width: 90%;
-  height: 600px;
+  width: 80%;
+  height: 70%;
   background: rgb(10, 53, 10);
   display: flex;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 #weaponName, #killerName, #roomName {
@@ -43,6 +55,7 @@ p {
 }
 
 .killer-deck {
+  flex-direction: row;
   width: 250px;
   height: 400px;
   background: #916563; 
@@ -52,7 +65,12 @@ p {
   box-shadow: 5px 10px 8px #888888;
 }
 
+.killer-deck:hover, .weapon-deck:hover, .room-deck:hover {
+  background:#9A2931;
+}
+
 .weapon-deck {
+  flex-direction: row;
   width: 250px;
   height: 400px;
   background: #9C9BD7;
@@ -63,6 +81,7 @@ p {
 }
 
 .room-deck {
+  flex-direction: row;
   width: 250px;
   height: 400px;
   background: #9E433A;
@@ -72,37 +91,148 @@ p {
   box-shadow: 5px 10px 8px #888888;
 }
 
+.solution-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.solution {
+  content: '';
+  padding-top: 40px;
+  width: 35%;
+  text-align: center;
+  font-size: 14px;
+}
+
+#solution {
+  font-size: 24px;
+  border-radius: 10px;
+}
+
 button {
   padding: 8px 16px;
-  background: #E0A29D;
+  background: #3D915D;
+  font-family: 'Permanent Marker';
   border: none;
   font-size: 20px;
   border-radius: 8px;
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  padding: 25px;
 }
 
-.solution-container {
-  content: '';
-  display: flex;
-  justify-content: center;
-  padding-top: 70px;
-  width: 50%;
-  text-align: center;
+button:hover {
+  background:#9A2931;
+}
+
+button:active {
+  background: rgb(10, 53, 10);
+  color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button:focus{
+  background-color:#9A2931;
 }
 
 #solution {
   background:#3D915D;
+  margin-bottom: 60px;
 }
 
-footer {
-  text-align: center;
-  background-color: #3D915D;
-  padding: 100px 0px 40px 0px;
+/**** FOR MOBILE ****/
+
+@media (max-width: 828px) {
+
+  .cards {
+      width: 90%;
+  }
+  
+  .killer-deck, .weapon-deck, .room-deck {
+      width: 200px;
+      height: 340px;
+  }
+
+  .solution-container {
+    padding-top: 50px;
+  }
+
+  .solution {
+    padding-top: 20px;
+  }
+
 }
 
-.footer-text {
-  background-color:#3D915D;
-  font-size: 14px;
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 78px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .cards {
+    width: 85%;
+  }
+
+  .killer-deck, .weapon-deck, .room-deck {
+    width: 180px;
+    height: 300px;
+  }
+
+  .solution-container {
+    padding-top: 55px;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+ .solution {
+    width: 45%;
+  }
+}
+
+@media (max-width: 638px) {
+
+  h1 {
+    text-align: center;
+    font-size: 64px;
+  }
+
+  .cards {
+      width: 90%;
+      flex-direction: column;
+  }
+  
+  .killer-deck, .weapon-deck, .room-deck {
+      width: 200px;
+      height: 340px;
+      margin: 10px;
+  }
+
+  .solution-container {
+    padding-top: 50px;
+    font-size: 10px;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .solution {
+    padding-top: 20px;
+  }
+
+  #solution {
+    font-size: 18px;
+  }
 }
