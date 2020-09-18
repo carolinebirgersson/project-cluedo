@@ -217,11 +217,14 @@ document.getElementById(
 // Reveal the mystery
 const revealMystery = (mystery) => {
   event.preventDefault();
-  document.getElementById('solution').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName} with an ${axe.name}, in the ${rooms[4]}.`
-  //Makes the solution-pictures go to the cards when clicking. Need to not click on a card first, to make it work perfectly.
+  document.getElementById('solutionText').innerText = `The murder was comitted by ${missScarlet.firstName} ${missScarlet.lastName} with an ${axe.name}, in the ${rooms[4]}.`
+  //Makes the solution-pictures go to the cards when clicking. 
+  //How to fix the "bug": when you click on a card first - and then click on the button - the name of the previous killer card stands there instead of the name that belongs to the chosen killer.  
   killerImage.src = missScarlet.image
   roomImage.src = library.image
   weaponImage.src = axe.image
 }
 revealMystery()
+
+
 

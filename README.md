@@ -1,13 +1,10 @@
 # Cluedo - Mystery Randomizer
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The brief was to create a Cluedo game.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time I would have added more details when clicking on a card. And I would have fixed the "bug" when you click on a card first - and then click on the button - the name of the previous killer card stands there instead of the name that belongs to the chosen killer.  
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

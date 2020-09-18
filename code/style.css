@@ -106,9 +106,11 @@ p {
   width: 32%;
 }
 
-#solution {
+  #solutionText {
+  background:#3D915D;
   font-size: 24px;
   border-radius: 10px;
+  margin-bottom: 60px;
 }
 
 button {
@@ -136,11 +138,6 @@ button:active {
 
 button:focus{
   background-color:#9A2931;
-}
-
-#solution {
-  background:#3D915D;
-  margin-bottom: 60px;
 }
 
 footer {
@@ -247,7 +244,7 @@ footer {
     padding-top: 20px;
   }
 
-  #solution {
+  #solutionText {
     font-size: 18px;
   }
 }
