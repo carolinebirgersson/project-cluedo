@@ -21,7 +21,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Permanent Marker';
   background: white;
   flex-direction: column;
   width: 100%;
@@ -29,7 +28,6 @@ h1 {
 }
 
 p {
-  font: 'Permanent Marker';
   background-color: #fff;
   font-size: 40px;
   font-weight: 300;
@@ -49,11 +47,11 @@ p {
   background: rgb(10, 53, 10);
 }
 
-#weaponName, #killerName, #roomName {
+.weapon-name, .killer-name, .room-name {
   font-size: 18px;
 }
 
-.killer-deck {
+.killer-deck, .weapon-deck, .room-deck {
   flex-direction: row;
   background: #916563; 
   text-align: center;
@@ -64,30 +62,20 @@ p {
   height: 400px;
 }
 
-.killer-deck:hover, .weapon-deck:hover, .room-deck:hover {
-  background:#9A2931;
+.killer-deck {
+  background: #916563; 
 }
 
 .weapon-deck {
-  flex-direction: row;
   background: #9C9BD7;
-  text-align: center;
-  box-shadow: 5px 10px 8px #888888;
-  width: 250px;
-  height: 400px;
-  padding-top: 30px;
-  border-radius: 16px;
 }
 
 .room-deck {
-  flex-direction: row;
   background: #9E433A;
-  text-align: center;
-  box-shadow: 5px 10px 8px #888888;
-  width: 250px;
-  height: 400px;
-  padding-top: 30px;
-  border-radius: 16px;
+}
+
+.killer-deck:hover, .weapon-deck:hover, .room-deck:hover {
+  background:#9A2931;
 }
 
 .solution-container {
@@ -101,7 +89,6 @@ p {
 
 .solution {
   text-align: center;
-  content: '';
   padding-top: 40px;
   width: 32%;
 }
