@@ -216,7 +216,7 @@ document.getElementById(
 
 // Reveal the mystery
 const revealMystery = () => {
-document.getElementById('solutionText').innerText = `The murder was comitted by ${mystery.killer.firstName}, with the ${mystery.weapon.name}, in the ${mystery.room}.`
+document.getElementById('solutionText').innerText = `The murder was comitted by ${mystery.killer.firstName} ${mystery.killer.lastName}, with the ${mystery.weapon.name}, in the ${mystery.room}.`
 }
 revealMystery()
 
